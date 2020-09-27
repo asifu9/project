@@ -59,7 +59,7 @@ spec:
     spec:
       containers:
       - name: webapp
-        image: asif/testnew:latest
+        image: asifu9/testnew
         # env:
         # - name: SPRING_PROFILES_ACTIVE
         #   value: production-microservice
