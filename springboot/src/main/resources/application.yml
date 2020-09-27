@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.99.101:31000/test?useSSL=false
+    username: root
+    password: password
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+  flyway:
+    enabled: true
+    url: jdbc:mysql://192.168.99.101:31000/test?useSSL=false
+    user: root
+    password: password
+    baseline-version: 1
+    locations:
+    - classpath:db/migration
+      
+ 
+server:
+  port: 8082
+  
+
