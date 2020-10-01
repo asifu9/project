@@ -1,3 +1,4 @@
+
 # apiVersion: apps/v1
 # kind: Deployment
 # metadata:
@@ -60,6 +61,6 @@ spec:
       containers:
       - name: webapp
         image: asifu9/testnew
-        # env:
-        # - name: SPRING_PROFILES_ACTIVE
-        #   value: production-microservice
+        env:
+        - name: SPRING_PROFILES_ACTIVE
+          value: kubemini
