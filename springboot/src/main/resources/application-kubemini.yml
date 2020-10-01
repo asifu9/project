@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://mysql/test?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://mysql:3306/test?allowPublicKeyRetrieval=true&useSSL=false
     username: root
     password: password
     driver-class-name: com.mysql.jdbc.Driver
@@ -9,7 +9,7 @@ spring:
       ddl-auto: none
   flyway:
     enabled: true
-    url: jdbc:mysql://mysql/test?allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mysql://mysql:3306/test?allowPublicKeyRetrieval=true&useSSL=false
     user: root
     password: password
     baseline-version: 1
