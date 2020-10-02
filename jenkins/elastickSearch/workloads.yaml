@@ -14,15 +14,22 @@ spec:
         app: elastic
     spec:
       containers:
+
+
+
       - image: asifu9/elastic
         name: elastic
         env:
+        - name: discovery.type
+          value: single-node
         ports:
         - containerPort: 9200
-          name: elastic
+          name: client
+        - containerPort: 9300
+          name: nodes
         volumeMounts:
         - name: elastic-persistent-storage
-          mountPath: /usr/share/elasticsearch
+          mountPath: /usr/share/elasticsearch/data
       volumes:
       - name: elastic-persistent-storage
         persistentVolumeClaim:
