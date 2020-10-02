@@ -14,7 +14,7 @@ spec:
         app: elastic
     spec:
       containers:
-      - image: asifu9:elastic
+      - image: asifu9/elastic
         name: elastic
         env:
         ports:
