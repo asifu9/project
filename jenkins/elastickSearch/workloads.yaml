@@ -27,10 +27,10 @@ spec:
           name: client
         - containerPort: 9300
           name: nodes
-        volumeMounts:
-        - name: elastic-persistent-storage
-          mountPath: /usr/share/elasticsearch/data
-      volumes:
-      - name: elastic-persistent-storage
-        persistentVolumeClaim:
-          claimName: elastic-pv-claim
+      #   volumeMounts:
+      #   - name: elastic-persistent-storage
+      #     mountPath: /usr/share/elasticsearch/data
+      # volumes:
+      # - name: elastic-persistent-storage
+      #   persistentVolumeClaim:
+      #     claimName: elastic-pv-claim
