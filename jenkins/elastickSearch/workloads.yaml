@@ -1,0 +1,29 @@
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2
+kind: Deployment
+metadata:
+  name: elastic
+spec:
+  selector:
+    matchLabels:
+      app: elastic
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: elastic
+    spec:
+      containers:
+      - image: asifu9:elastic
+        name: elastic
+        env:
+        ports:
+        - containerPort: 9200
+          name: elastic
+        volumeMounts:
+        - name: elastic-persistent-storage
+          mountPath: /usr/share/elasticsearch
+      volumes:
+      - name: elastic-persistent-storage
+        persistentVolumeClaim:
+          claimName: elastic-pv-claim
