@@ -4,7 +4,7 @@ FROM elasticsearch:7.5.1
 MAINTAINER asif
 
 # copy the configuration file into the container
-COPY elasticsearch.yml /usr/share/elasticsearch/config
+#COPY elasticsearch.yml /usr/share/elasticsearch/config
 
 # expose the default Elasticsearch port
 EXPOSE 9200
